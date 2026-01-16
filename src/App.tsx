@@ -3,7 +3,7 @@
  * KitchenCoach - Recipe Graph Visualizer & Cooking Coach
  */
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { RecipeGraph, RecipeInput, ValidationResult } from './types/recipe';
 import { RecipeInput as RecipeInputComponent } from './components/RecipeInput';
 import { TableDiagram } from './components/TableDiagram';
@@ -19,7 +19,6 @@ function App() {
   const [recipeGraph, setRecipeGraph] = useState<RecipeGraph | null>(null);
   const [viewMode, setViewMode] = useState<ViewMode>('input');
   const [validation, setValidation] = useState<ValidationResult | null>(null);
-  const [selectedOperation, setSelectedOperation] = useState<string | null>(null);
 
   const handleRecipeSubmit = (recipeInput: RecipeInput) => {
     // Parse recipe into graph
@@ -63,7 +62,6 @@ function App() {
   };
 
   const handleOperationClick = (operationId: string) => {
-    setSelectedOperation(operationId);
     // Find operation details
     const operation = recipeGraph?.nodes.find(n => n.id === operationId);
     if (operation) {

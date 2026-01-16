@@ -3,7 +3,7 @@
  * Based on PRD Section 9.2: Validation rules
  */
 
-import { RecipeGraph, GraphNode, GraphEdge, ValidationResult, ValidationError, OperationNode, ResourceNode } from '../types/recipe';
+import { RecipeGraph, ValidationResult, ValidationError, OperationNode, ResourceNode } from '../types/recipe';
 
 export class GraphValidator {
   private graph: RecipeGraph;

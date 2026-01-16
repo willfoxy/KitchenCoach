@@ -3,7 +3,7 @@
  * Based on PRD Section 10.1.1: Table diagram renderer (MVP target)
  */
 
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { RecipeGraph, OperationNode, ResourceNode, GraphEdge } from '../types/recipe';
 import { RecipeScheduler } from '../services/scheduler';
 import './TableDiagram.css';

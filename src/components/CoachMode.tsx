@@ -67,10 +67,6 @@ export const CoachMode: React.FC<CoachModeProps> = ({ graph }) => {
 
   const handleStartTask = (taskId: string) => {
     // Mark task as in_progress
-    const updatedTasks = allTasks.map(task =>
-      task.id === taskId ? { ...task, status: 'in_progress' as const } : task
-    );
-
     setCoachState(prev => ({
       ...prev,
       now: prev.now.map(task =>

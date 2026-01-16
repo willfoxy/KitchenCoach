@@ -5,13 +5,9 @@
 
 import {
   RecipeGraph,
-  GraphNode,
-  GraphEdge,
   OperationNode,
-  ResourceNode,
   Task,
   CoachModeState,
-  Timer,
   ScheduleParams,
   ScheduleResult,
   TimelineEvent
@@ -20,12 +16,10 @@ import {
 export class RecipeScheduler {
   private graph: RecipeGraph;
   private operationNodes: OperationNode[];
-  private resourceNodes: ResourceNode[];
 
   constructor(graph: RecipeGraph) {
     this.graph = graph;
     this.operationNodes = graph.nodes.filter((n): n is OperationNode => n.type === 'operation');
-    this.resourceNodes = graph.nodes.filter((n): n is ResourceNode => n.type === 'resource');
   }
 
   /**
