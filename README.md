@@ -120,6 +120,43 @@ npm run dev
 npm run build
 ```
 
+## Deployment
+
+### Deploy to Vercel
+
+This project is configured for automatic deployment with Vercel.
+
+#### Option 1: Deploy via Vercel CLI
+
+```bash
+# Install Vercel CLI globally
+npm install -g vercel
+
+# Deploy to production
+vercel --prod
+```
+
+#### Option 2: Deploy via GitHub Integration
+
+1. Push your code to a GitHub repository
+2. Visit [vercel.com](https://vercel.com) and sign in
+3. Click "Import Project" and select your GitHub repository
+4. Vercel will auto-detect the Vite framework
+5. Click "Deploy" - no configuration needed!
+
+#### Option 3: One-Click Deploy
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/willfoxy/KitchenCoach)
+
+The project includes:
+- `vercel.json` - Vercel configuration with SPA routing
+- `.vercelignore` - Files to exclude from deployment
+- Optimized build settings for Vite
+
+### Environment Variables
+
+No environment variables are required for the MVP. All functionality runs client-side.
+
 ### Usage
 
 1. **Enter a Recipe**

@@ -1,0 +1,21 @@
+# This is a placeholder workflow file for GitHub Actions
+# Vercel will handle deployment automatically via its GitHub integration
+# No action needed - just connect your repo to Vercel
+
+name: Vercel Deployment Info
+on:
+  push:
+    branches:
+      - main
+      - claude/*
+
+jobs:
+  info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deployment Info
+        run: |
+          echo "✅ This project is configured for Vercel deployment"
+          echo "📝 Connect your repository to Vercel for automatic deployments"
+          echo "🚀 Every push will trigger a preview deployment"
+          echo "🌟 Production deployments happen on main branch merges"
